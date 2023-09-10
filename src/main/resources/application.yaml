@@ -1,0 +1,29 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/property_rental
+    username: root
+    password: ${PASSWORD}
+    jpa:
+      hibernate:
+        ddl-auto: validate
+
+  flyway:
+    enabled: true
+    baseline:
+      -on:
+        -migration: true
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
+
+
+#
+#file:
+#  storage:
+#    -dir: C:\Users\PC\Desktop\Property_rental
