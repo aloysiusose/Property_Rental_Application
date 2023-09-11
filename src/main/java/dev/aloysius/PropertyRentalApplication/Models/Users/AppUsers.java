@@ -1,5 +1,6 @@
 package dev.aloysius.PropertyRentalApplication.Models.Users;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import dev.aloysius.PropertyRentalApplication.Models.Products.Properties;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -24,6 +25,7 @@ public class AppUsers {
     @Enumerated(EnumType.STRING)
     private UserCategory userCategory;
     @OneToMany(mappedBy = "appUsers")
+    @JsonManagedReference
     private List<Properties> propertiesList;
 
     public AppUsers(AppUsers users){

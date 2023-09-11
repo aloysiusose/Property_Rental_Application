@@ -1,8 +1,9 @@
 CREATE TABLE IF NOT EXISTS properties_table(
 id BIGINT AUTO_INCREMENT,
-property_name VARCHAR(50) NOT,
+property_name VARCHAR(50) NOT NULL,
 property_description VARCHAR (500),
 property_type VARCHAR(200),
+property_status VARCHAR(100) NOT NULL,
 owner_id BIGINT,
 FOREIGN KEY (owner_id) REFERENCES app_users(id),
 PRIMARY KEY(id)

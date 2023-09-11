@@ -16,11 +16,11 @@ spring:
       -on:
         -migration: true
 
-logging:
-  level:
-    org:
-      springframework:
-        security: TRACE
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: TRACE
 
 
 #
